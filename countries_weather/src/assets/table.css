@@ -1,0 +1,24 @@
+.text-center {
+  text-align: center;
+}
+
+.table {
+    min-width: 90%;
+    margin: 3rem auto;
+    border-collapse: collapse;
+}
+.header-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+.column-table {
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.table-row:hover {
+    background-color: rgba(0, 123, 180, 0.1);
+    cursor: pointer;
+}
