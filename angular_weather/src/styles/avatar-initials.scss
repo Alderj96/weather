@@ -1,0 +1,20 @@
+.circle {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.initial-avatar {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Colors */
+  background-color: rgb(228, 151, 35);
+  color: #fff;
+
+  /* Rounded border */
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}

@@ -1,0 +1,77 @@
+<div class="form-signup">
+  <form class="form-wrapper" [formGroup]="form" (ngSubmit)="signUp($event)">
+    <div class="form-title">
+      Crear Cuenta
+    </div>
+
+    <div class="form-title form-invalid" v-if="signUpError">
+      <p>{{ signUpError }}</p>
+    </div>
+
+    <label class="form-label">Nombre Completo:</label>
+    <input
+      class="form-input"
+      formControlName="fullname"
+      type="text"
+    />
+    <div class="form-invalid" *ngIf="fullnameField?.touched && fullnameField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+    <div class="form-invalid" *ngIf="fullnameField?.touched && fullnameField?.hasError('pattern')">
+      <p>Por favor coloca un nombre real</p>
+    </div>
+
+    <label class="form-label">Usuario:</label>
+    <input
+      class="form-input"
+      formControlName="username"
+      type="text"
+    />
+    <div class="form-invalid" *ngIf="usernameField?.touched && usernameField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+
+    <label class="form-label">Email:</label>
+    <input
+      class="form-input"
+      formControlName="mail"
+      type="email"
+    />
+    <div class="form-invalid" *ngIf="mailField?.touched && mailField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+    <div class="form-invalid" *ngIf="mailField?.touched && mailField?.hasError('email')">
+      <p>Debe ser un email valido</p>
+    </div>
+
+    <label class="form-label">Contraseña:</label>
+    <input
+      class="form-input"
+      formControlName="password"
+      type="password"
+    />
+    <div class="form-invalid" *ngIf="passwordField?.touched && passwordField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+    <div class="form-invalid" *ngIf="passwordField?.touched && passwordField?.hasError('pattern')">
+      <p>La contraseña debe ser de almenos 8 caracteres</p>
+    </div>
+
+    <label class="form-label">Repetir Contraseña:</label>
+    <input
+      class="form-input"
+      formControlName="confirmpassword"
+      type="password"
+    />
+    <div class="form-invalid" *ngIf="confirmpasswordField?.touched && confirmpasswordField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+    <div class="form-invalid" *ngIf="form.hasError('match_password')">
+      <p>Las contraseñas no coinciden</p>
+    </div>
+
+    <div class="form-submit">
+      <button class="form-button">Crear Cuenta</button>
+    </div>
+  </form>
+</div>

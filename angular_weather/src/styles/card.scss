@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.349);
+  padding: 1rem 1rem;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+}
+.card-title {
+  margin: 0;
+  color: gray;
+  padding: 5px;
+  border-bottom: 2px solid rgb(0, 195, 255);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.card-content {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,32 @@
+<main class="main-users">
+  <section class="card">
+    <div class="card-title text-center">
+      Lista de Usuarios
+    </div>
+
+    <div class="card-content">
+      <table class="table">
+        <tr class="table-header">
+          <th class="header-section" *ngFor="let header of headers">
+            {{ header }}
+          </th>
+        </tr>
+
+        <tr class="table-row" *ngFor="let usuario of usuarios" >
+          <td class="column-table">
+            {{ usuario.fullname }}
+          </td>
+          <td class="column-table">
+            {{ usuario.mail }}
+          </td>
+          <td class="column-table">
+            {{ usuario.createdAt | date: 'medium' }}
+          </td>
+          <td class="column-table">
+            {{ usuario.lastlogin | date: 'medium' }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</main>

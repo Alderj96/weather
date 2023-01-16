@@ -1,0 +1,81 @@
+@import "./navbar.scss";
+@import "./card.scss";
+@import "./avatar-initials.scss";
+@import "./table.scss";
+@import "./chip.scss";
+@import "./form.scss";
+
+a {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.float-right {
+  float: right;
+}
+
+.card-textbold {
+  margin: 0;
+  color: rgb(29, 28, 28);
+  padding: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.input-simple {
+  padding: 0.5em 1em;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(100, 94, 94);
+  color: #555;
+}
+
+.button-green {
+  background-color: #197e37;
+  border: 0;
+  padding: 0.5em 1em;
+  margin: 0.5em 10px;
+  margin-left: 10px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button-light-blue {
+  background-color: #19777e;
+  border: 0;
+  padding: 2px 1em;
+  margin: 4px 0px;
+  margin-left: 10px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}

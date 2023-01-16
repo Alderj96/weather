@@ -1,0 +1,32 @@
+<div class="row">
+  <input
+    [formControl]="todoField"
+    class="input-simple"
+    type="text"
+    placeholder="Nueva tarea"
+  />
+
+  <button
+    class="button-green"
+    (click)="addTodo()"
+  >
+    +
+  </button>
+</div>
+
+<div class="form-invalid" *ngIf="todoField?.touched && todoField?.hasError('required')">
+  <p>Debes rellenar el campo</p>
+</div>
+
+<div
+  class="list-todo-item row"
+  *ngFor="let todo of todoList"
+>
+  <span>- {{ todo.description }}</span>
+  <button
+    class="button-light-blue"
+    (click)="updateFinishTodo(todo)"
+  >
+    ✔
+  </button>
+</div>

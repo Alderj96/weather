@@ -1,0 +1,73 @@
+.form-wrapper {
+  max-width: 420px;
+  min-width: 300px;
+  margin: 30px auto;
+  background: white;
+  text-align: left;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.205);
+}
+
+.form-title {
+  color: rgb(117, 117, 117);
+  font-weight: bold;
+}
+
+.form-label {
+  color: #aaa;
+  display: inline-block;
+  margin: 25px 0 15px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.form-input {
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+
+.form-input[type="checkbox"] {
+  display: inline-block;
+  width: 16px;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: 2px;
+}
+
+.form-button {
+  background-color: #0b6dff;
+  border: 0;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #5d9dfc;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.form-invalid {
+  color: rgb(133, 39, 39);
+}
+
+.form-text {
+  color: black;
+}
+
+.no-account {
+  display: inline;
+}

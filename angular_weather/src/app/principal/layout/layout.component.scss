@@ -1,0 +1,11 @@
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  background-color: white;
+}

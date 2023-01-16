@@ -1,0 +1,110 @@
+<div class="country-weather-container">
+  <aside class="card">
+    <div class="card-title">
+      paises disponibles
+    </div>
+
+    <div class="card-content country-list">
+      <div class="country-item card pointer" *ngFor="let country of countries" (click)="onSelectCountry(country)">
+        <img
+          class="country-image"
+          src="/assets/images/{{ country.img }}"
+          alt="bandera"
+        />
+        <div class="country-name">
+          {{ country.name }}
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="card">
+    <div class="card-title">
+      clima
+    </div>
+
+    <div class="card-content" *ngIf="weatherCountry">
+      <img [src]="weatherCountry.img" alt="icono">
+
+      <div>
+        <p>{{ weatherCountry.temp }} °C</p>
+        <p class="capitalize">{{ weatherCountry.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-title">
+      pais seleccionado
+    </div>
+
+    <div class="card-content" *ngIf="countrySelected">
+      <div class="country-item">
+        <div class="country-name">
+          {{ countrySelected.name }}
+        </div>
+
+        <img
+          class="country-image"
+          src="/assets/images/{{ countrySelected.img }}"
+          alt="bandera"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Tareas pendientes -->
+  <section class="card max-25vh">
+    <div class="card-title">
+      tareas pendientes
+    </div>
+
+    <div class="list-todo">
+      <app-todo-list></app-todo-list>
+    </div>
+  </section>
+
+  <!-- Hora -->
+  <section class="card">
+    <div class="card-title">
+      hora
+    </div>
+
+    <div class="card-content" *ngIf="citySelected">
+      <app-clock></app-clock>
+    </div>
+  </section>
+
+  <!-- Tareas completas -->
+  <section class="card max-25vh">
+    <div class="card-title">
+      tares completadas
+    </div>
+
+    <div class="list-todo">
+      <div
+        class="list-todo-item"
+        *ngFor="let todo of todosFinisheds$ | async"
+      >
+        <span>- {{ todo.description }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card max-25vh">
+    <div class="card-title">
+      zonas horarias disponibles
+    </div>
+
+    <div class="card-content content-cities" *ngIf="countrySelected">
+      <div
+        *ngFor="let city of countrySelected.cities"
+        class="chip pointer active"
+        [ngClass]="{'chip-selected': city.name === citySelected?.name }"
+        (click)="onSelectCity(city)"
+      >
+        {{ city.name }}
+      </div>
+    </div>
+  </section>
+</div>

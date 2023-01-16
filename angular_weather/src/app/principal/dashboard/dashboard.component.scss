@@ -1,0 +1,70 @@
+.country-weather-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
+}
+
+.country-weather-container > aside {
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
+
+@media (max-width: 700px) {
+  .country-weather-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .country-weather-container > aside {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.content-cities {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.country-image {
+  width: 100px;
+  flex-shrink: 1;
+  aspect-ratio: 16 / 9;
+}
+
+.country-name {
+  margin-left: 10px;
+  flex-grow: 1;
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(80, 78, 78);
+  letter-spacing: 1px;
+}
+
+.country-list {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.max-25vh {
+  max-height: 25vh;
+  overflow: auto;
+}
+
+@media (max-width: 700px) {
+  .country-list {
+    gap: 1em;
+    padding: 0.5 em;
+  }
+}

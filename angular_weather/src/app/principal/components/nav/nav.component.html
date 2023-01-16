@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <a routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="userlist" routerLinkActive="active">Usuarios</a>
+  <div class="dropdown" style="float: right">
+    <div class="dropbtn">
+      <div class="circle">
+        <div class="initial-avatar">{{ nombreUsuario$ | async | initials }}</div>
+      </div>
+      <span> {{ nombreUsuario$ | async }} </span>
+      <!-- <span>{{ user.fullname }}</span> -->
+    </div>
+    <div class="dropdown-content">
+      <a (click)="onLogOut()">Cerrar session</a>
+      <!-- <a href="#" @click="onLogout">Cerrar Sesión</a> -->
+    </div>
+  </div>
+</nav>

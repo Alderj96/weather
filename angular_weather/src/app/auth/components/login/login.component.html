@@ -1,0 +1,47 @@
+<div class="form-signin">
+  <form class="form-wrapper" [formGroup]="form" (ngSubmit)="logIn($event)">
+    <div class="form-title">
+      Bienvenido
+    </div>
+
+    <div class="form-invalid" *ngIf="signInError">
+      <p>{{ signInError }}</p>
+    </div>
+
+    <label class="form-label">Usuario:</label>
+    <input
+      class="form-input"
+      formControlName="username"
+      type="text"
+    />
+    <div class="form-invalid" *ngIf="usernameField?.touched && usernameField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+
+    <label class="form-label">Contraseña:</label>
+    <input
+      class="form-input"
+      formControlName="password"
+      type="password"
+    />
+    <div class="form-invalid" *ngIf="passwordField?.touched && passwordField?.hasError('required')">
+      <p>Debes rellenar el campo</p>
+    </div>
+
+    <div class="remindme">
+      <input class="form-input" id="remindme" type="checkbox" formControlName="remindme" />
+      <label class="form-label" for="remindme">Recuerdame</label>
+    </div>
+
+    <div class="no-account">
+      <p class="form-text">
+        ¿No tienes cuenta?
+        <a routerLink="/register">Registrarse</a>
+      </p>
+    </div>
+
+    <div class="form-submit">
+      <button type="submit" class="form-button">Iniciar sesion</button>
+    </div>
+  </form>
+</div>
