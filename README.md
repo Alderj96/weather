@@ -7,3 +7,4 @@ Aplicacion que muestra las temperaturas de 3 paises
   - Usar la version 14.17.0 para instalar las dependencias
   - Correr la app usando la 16.18.0
 - Para correr el backend/fronend se debe usar el comando { npm run dev } en sus respectivas carpetas
+- Se agrega el proyecto en su version para angular 14.2.8, usando node 14.17.3
